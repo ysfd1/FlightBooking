@@ -1,0 +1,154 @@
+/* Header Styles */
+.main-header {
+    background-color: #2e3a87;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #1d2865;
+    color: #ffffff;
+}
+
+/* General */
+body {
+    padding-top: 60px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 60%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #1c1c6c;
+    margin-bottom: 20px;
+}
+
+/* Flight Details */
+.details {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.details p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.details strong {
+    color: #000543;
+}
+
+/* Passengers Lists */
+.passengers {
+    margin-top: 20px;
+}
+
+.passengers h2 {
+    font-size: 20px;
+    color: #1c1c6c;
+    margin-bottom: 10px;
+}
+
+.passengers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.passengers li {
+    font-size: 16px;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.passengers li:hover {
+    background: #e2e2e2;
+}
+
+/* Buttons */
+button {
+    background: #1c1c6c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+button:hover {
+    background: #000543;
+}
+
+/* Success and Error Messages */
+.success {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.error {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

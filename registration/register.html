@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .main-container {
+            display: flex;
+            background-color: #fff;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 850px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 50px;
+            flex: 1;
+            position: relative;
+        }
+
+        h1 {
+            color: #000543;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 12px 15px;
+            font-size: 14px;
+            border-radius: 30px;
+            width: 100%;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        input:focus {
+            background-color: #e0e0e0;
+        }
+
+        .radio-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .radio-option label {
+            font-size: 14px;
+            color: #333;
+            margin-left: 8px;
+        }
+
+        button {
+            background-color: #1c1c6c;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #000543;
+        }
+
+        .image-container {
+            background-color: #16165d;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 80px;
+        }
+
+        .image-container img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Error message styling */
+        .error-message {
+            color: red;
+            font-size: 13px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Left Section: Form -->
+        <div class="container">
+            <h1>Register</h1>
+            <form id="registerForm" action="../registration/register.php" method="post">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="tel" name="telephone" placeholder="Telephone" required>
+                <div style="position: relative;">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <span id="emailError" class="error-message">Error: Email must end with ".com".</span>
+                </div>
+                <input type="password" name="password" placeholder="Password" required>
+
+                <div class="radio-option">
+                    <label>
+                        <input type="radio" name="type" value="passenger" required>
+                        Passenger
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="company">
+                        Company
+                    </label>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="image-container">
+            <img src="../uploads/plane.gif" alt="Airplane">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailValue = emailInput.value.trim();
+
+            if (!emailValue.toLowerCase().endsWith('.com')) {
+                e.preventDefault(); // Prevent form submission
+                emailError.style.display = 'block';
+                emailInput.focus();
+            } else {
+                emailError.style.display = 'none';
+            }
+        });
+
+        // Optional: Hide error message when user starts typing
+        document.getElementById('email').addEventListener('input', function () {
+            const emailError = document.getElementById('emailError');
+            if (this.value.trim().toLowerCase().endsWith('.com')) {
+                emailError.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

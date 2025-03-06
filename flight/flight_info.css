@@ -1,0 +1,223 @@
+/* Header Styles */
+.main-header {
+  background-color: #2e3a87;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #1d2865;
+  color: #ffffff;
+}
+
+body {
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #e6f0ff, #cce0ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Reduced width */
+    padding: 35px; /* Reduced padding */
+  }
+  
+  h1 {
+    color: #2e3a87;
+    font-size: 36px; /* Reduced font size */
+    margin-bottom: 30px; /* Reduced margin */
+  }
+  
+  p {
+    margin: 20px 0; /* Reduced margin */
+    font-size: 20px; /* Reduced font size */
+  }
+  
+  h2 {
+    color: #2e3a87;
+    margin: 30px 0 15px; /* Reduced margin */
+    font-size: 22px; /* Reduced font size */
+  }
+  
+  form {
+    margin-top: 30px; /* Reduced margin */
+  }
+  
+  input[type="radio"] {
+    margin-right: 15px; /* Reduced margin */
+  }
+  
+  button {
+    background-color: #2e3a87;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 18px 35px; /* Reduced padding */
+    cursor: pointer;
+    margin-top: 15px; /* Reduced margin */
+    font-size: 16px; /* Reduced font size */
+  }
+  
+  button:hover {
+    background-color: #1d2865;
+  }
+  
+  a.btn {
+    display: inline-block;
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    padding: 18px 35px; /* Reduced padding */
+    border-radius: 5px;
+    margin-top: 30px; /* Reduced margin */
+    font-size: 16px; /* Reduced font size */
+  }
+  
+  a.btn:hover {
+    background-color: #bbb;
+  }
+  
+  .success {
+    color: green;
+    font-size: 16px; /* Reduced font size */
+    margin-bottom: 20px; /* Reduced margin */
+  }
+  
+  .error {
+    color: red;
+    font-size: 16px; /* Reduced font size */
+    margin-bottom: 20px; /* Reduced margin */
+  }
+
+
+/* Chat Icon */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.chat-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chatbox */
+.chatbox {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Chatbox Header */
+.chatbox-header {
+  background-color: #2e3a87;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.chatbox-header span {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.chatbox-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Chatbox Body */
+.chatbox-body {
+  padding: 10px;
+}
+
+.chatbox textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.chatbox button {
+  width: 100%;
+  background-color: #2e3a87;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.chatbox button:hover {
+  background-color: #1d2865;
+}
