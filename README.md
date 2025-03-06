@@ -15,6 +15,6 @@ FlightBooking is a PHP-based web application designed for managing flight-relate
         🛠️ Technologies Used
         
                 🔹 Backend: PHP
-                🔹 Frontend: HTML, CSS
+                🔹 Frontend: HTML, CSS, JavaScript
                 🔹 Database: MySQL
 
